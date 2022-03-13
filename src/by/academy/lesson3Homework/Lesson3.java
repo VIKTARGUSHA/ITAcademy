@@ -1,4 +1,4 @@
-package by.academy;
+package by.academy.lesson3Homework;
 
 public class Lesson3 {
 
