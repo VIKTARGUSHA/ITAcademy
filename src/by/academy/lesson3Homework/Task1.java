@@ -1,4 +1,4 @@
-package by.academy;
+package by.academy.lesson3Homework;
 
 import java.util.Scanner;
 
@@ -9,7 +9,6 @@ public class Task1 {
         double amount = sc.nextInt();
         System.out.println("Возраст:");
         int age = sc.nextInt();
-
         if(amount < 100){
             amount = (amount*95)/100;
             System.out.println("1");
