@@ -1,4 +1,4 @@
-package by.academy.lesson4;
+package by.academy.lesson4.lesson;
 
 public class Lesson4Task1Loops {
     public static void main(String[] args) {
