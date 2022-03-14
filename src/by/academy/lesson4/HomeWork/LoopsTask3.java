@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 //3. Ввести n строк с консоли. Вывести на консоль те строки, длина которых меньше (больше)
 //        средней, а также длину.
-public class ArrayTask3 {
+public class LoopsTask3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = 5;

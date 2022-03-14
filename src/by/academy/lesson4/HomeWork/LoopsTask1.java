@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 //1. Ввести n строк с консоли, найти самую короткую и самую длинную строки.
 //        Вывести найденные строки и их длину.
-public class ArrayTask1 {
+public class LoopsTask1 {
     public static void main(String[] args) {
         int n = 5;
         Scanner sc = new Scanner(System.in);
