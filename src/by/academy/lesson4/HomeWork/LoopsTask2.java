@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 //2. Ввести n строк с консоли. Упорядочить и вывести строки в порядке возрастания (убывания)
 //        значений их длины.
-public class ArrayTask2 {
+public class LoopsTask2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = 3;
