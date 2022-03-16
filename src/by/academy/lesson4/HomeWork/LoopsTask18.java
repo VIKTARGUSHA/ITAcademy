@@ -14,5 +14,6 @@ public class LoopsTask18 {
             }
         }
         System.out.println(counter);
+        System.out.println();
     }
 }
