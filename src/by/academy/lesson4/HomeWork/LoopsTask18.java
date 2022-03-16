@@ -13,8 +13,8 @@ public class LoopsTask18 {
                 System.out.print(i +" ");
             }
         }
-        System.out.println(counter);
         System.out.println();
+        System.out.println(counter);
 
     }
 }
