@@ -1,4 +1,4 @@
-package by.academy.lesson4.HomeWork;
+package by.academy.lesson4.HomeWork.Loops;
 
 //В сберкассу на трёхпроцентный вклад положили S рублей.Какой станет сумма вклада через N лет.
 public class LoopsTask6 {

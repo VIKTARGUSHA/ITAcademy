@@ -1,4 +1,4 @@
-package by.academy.lesson4.HomeWork;
+package by.academy.lesson4.HomeWork.Loops;
 
 //  10. Даны натуральные числа от 1 до 50. Найти сумму тех из них, которые делятся на 5 или на 7.
 public class LoopsTask10 {

@@ -1,4 +1,4 @@
-package by.academy.lesson4.HomeWork;
+package by.academy.lesson4.HomeWork.Loops;
 
 //9. Даны натуральные числа от 35 до 87. Найти и напечатать те из них, которые при делении на 7
 // дают остаток 1, 2 или 5.

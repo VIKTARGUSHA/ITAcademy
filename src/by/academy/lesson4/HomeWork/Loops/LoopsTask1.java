@@ -1,4 +1,4 @@
-package by.academy.lesson4.HomeWork;
+package by.academy.lesson4.HomeWork.Loops;
 
 import java.util.Arrays;
 import java.util.Scanner;

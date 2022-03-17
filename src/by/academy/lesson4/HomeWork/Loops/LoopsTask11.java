@@ -1,4 +1,4 @@
-package by.academy.lesson4.HomeWork;
+package by.academy.lesson4.HomeWork.Loops;
 
 //11. Напечатать те из двузначных чисел которые делятся на 4, но не делятся на 6.
 public class LoopsTask11 {
