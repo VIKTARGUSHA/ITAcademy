@@ -10,7 +10,7 @@ public class ArraysTask4 {
         Random random = new Random();
         int [] ar = new int[8];
         for (int i = 0; i < 8; i++){
-            ar[i] = random.nextInt(1,10);
+            ar[i] = random.nextInt(9)+1;
             System.out.print(ar[i] + " ");
         }
         for (int j = 1; j < 8; j +=2){

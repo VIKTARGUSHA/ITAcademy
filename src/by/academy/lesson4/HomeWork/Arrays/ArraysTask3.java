@@ -12,7 +12,7 @@ public class ArraysTask3 {
         Random random = new Random();
         int[] array = new int[15];
         for (int i = 0; i < array.length; i++){
-            array[i] = random.nextInt(0,9);
+            array[i] = random.nextInt(9);
             System.out.print(array[i] + " ");
         }
         int countHonest = 0;
