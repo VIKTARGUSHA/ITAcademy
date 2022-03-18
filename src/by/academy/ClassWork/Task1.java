@@ -1,4 +1,4 @@
-package by.academy.ClassWork.lesson5;
+package by.academy.ClassWork;
 
 public class Task1 {
     public static void main(String[] args) {

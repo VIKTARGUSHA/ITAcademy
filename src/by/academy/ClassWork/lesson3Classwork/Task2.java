@@ -1,6 +1,5 @@
-package by.academy.lesson3Homework;
+package by.academy.ClassWork.lesson3Classwork;
 
-import java.io.BufferedReader;
 import java.util.Scanner;
 
 public class Task2 {

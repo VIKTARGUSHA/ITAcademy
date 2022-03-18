@@ -1,4 +1,4 @@
-package by.academy.lesson3HomeworkArrays;
+package by.academy.ClassWork.lesson3ClassWorkArrays;
 
 import java.io.IOException;
 import java.util.Scanner;
