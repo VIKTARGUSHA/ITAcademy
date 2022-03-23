@@ -23,5 +23,6 @@ public class StringsTask2 {
         for (String s : array){
             System.out.print(s + " ");
         }
+        sc.close();
     }
 }

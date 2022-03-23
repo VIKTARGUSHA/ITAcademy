@@ -21,5 +21,6 @@ public class StringsTask1 {
         System.out.println(Arrays.toString(s));
         System.out.println("The shortest: " + s[0] + " " + s[0].length() + "\n"
                 + "The longest: " + s[s.length-1] + " " + s[s.length-1].length());
+        sc.close();
     }
 }
