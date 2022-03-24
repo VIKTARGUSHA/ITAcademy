@@ -1,11 +1,10 @@
 package by.academy.HomeWork.Strings;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 //5. Ввести n слов с консоли. Найти количество слов, содержащих только символы латинского
 //        алфавита, а среди них – количество слов с равным числом гласных и согласных букв.
-public class StringTask5 {
+public class StringsTask5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
             int n  = sc.nextInt();
