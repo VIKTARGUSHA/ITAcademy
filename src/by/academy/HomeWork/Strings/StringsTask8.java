@@ -49,10 +49,9 @@ public class StringsTask8 {
             if( counterPolindrom == 1 && indexAr == array.length-1){
                 System.out.println(str);
             }
-
             indexAr ++;
 
         }
-
+sc.close();
     }
 }
