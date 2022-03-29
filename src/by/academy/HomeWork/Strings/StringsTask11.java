@@ -33,6 +33,5 @@ public class StringsTask11 {
                 }
                 else System.out.println("k came from [10 , 10k]");
         }
-
     }
 }
