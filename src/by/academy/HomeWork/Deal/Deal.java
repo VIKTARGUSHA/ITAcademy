@@ -6,11 +6,11 @@ public class Deal {
     protected int time;
     protected User buyer;
     protected User saller;
-
+    protected int numberOfProdukts;
     protected Boolean isDone;
     protected Product [] basket;
 
-public Deal(int time, User buyer, User saller, Product[] basket, Boolean isDone){
+public Deal(int time, User buyer, User saller, Product[] basket, Boolean isDone, int numberOfProdukts){
     this.time = time;
     this.buyer = buyer;
     this.saller = saller;
@@ -27,7 +27,7 @@ public Deal(){
                 "time=" + time +
                 ", buyer=" + buyer +
                 ", saller=" + saller +
-                ", products=" + Arrays.toString(basket) +
+                ", basket=" + Arrays.toString(basket) +
                 ", isDone=" + isDone +
                 '}';
     }

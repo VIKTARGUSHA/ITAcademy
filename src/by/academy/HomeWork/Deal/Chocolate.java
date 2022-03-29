@@ -5,8 +5,10 @@ public class Chocolate extends Product{
     private String flavor;
     private int weight;
 
-    public Chocolate(){
-
+    public Chocolate(double quantity, String type, String name, double price, String flavor, int weight){
+        super(quantity, type, name, price);
+        this.flavor = flavor;
+        this.weight = weight;
     }
     public int getWeight() {
         return weight;

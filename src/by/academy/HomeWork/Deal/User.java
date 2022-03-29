@@ -12,6 +12,16 @@ public User(){
         this.age = age;
         this.money = money;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", money=" + money +
+                '}';
+    }
+
     public double getMoney() {
         return money;
     }
