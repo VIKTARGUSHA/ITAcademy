@@ -13,9 +13,10 @@ public class Product {
  }
 
     public Product() {
-
     }
-
+public double getColculatedPrice(){
+     return price * quantity;
+}
     @Override
     public String toString() {
         return "Product{" +

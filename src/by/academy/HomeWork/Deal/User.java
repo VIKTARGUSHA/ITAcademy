@@ -13,6 +13,23 @@ public User(){
         this.money = money;
     }
 
+    public void getCheckMoney(double totalPrice){
+    if(totalPrice > money){
+        System.out.println("Buyer doesn't have enough money");
+        return;
+    }else {
+        System.out.println("Buyer is rich");
+    }
+    }
+    public double sallerSold(double fullPrice){
+    this.money += fullPrice;
+    return money;
+    }
+
+    public double buyerPay(double fullPrice){
+    this.money -= fullPrice;
+    return money;
+    }
     @Override
     public String toString() {
         return "User{" +

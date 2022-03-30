@@ -3,22 +3,33 @@ package by.academy.HomeWork.Deal;
 import java.util.Arrays;
 
 public class Deal {
-    protected int time;
+    protected String time;
     protected User buyer;
     protected User saller;
     protected int numberOfProdukts;
     protected Boolean isDone;
     protected Product [] basket;
+    protected double fullPrice;
 
-public Deal(int time, User buyer, User saller, Product[] basket, Boolean isDone, int numberOfProdukts){
+public Deal(String time, User buyer, User saller, Product[] basket, Boolean isDone, int numberOfProdukts){
     this.time = time;
     this.buyer = buyer;
     this.saller = saller;
     this.basket = basket;
     this.isDone = isDone;
+    this.numberOfProdukts = numberOfProdukts;
 }
 public Deal(){
+}
+public void deal(){
+    if(basket == null){
+        System.out.println("Error, the basket is empty");
+        return;
+    }
 
+    for(Product product : basket){
+        fullPrice += product.getColculatedPrice();
+    }
 }
 
     @Override
@@ -56,11 +67,11 @@ public Deal(){
         this.saller = saller;
     }
 
-    public int getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
