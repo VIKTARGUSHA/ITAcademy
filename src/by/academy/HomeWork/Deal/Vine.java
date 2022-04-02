@@ -8,12 +8,19 @@ public class Vine extends Product{
     public Vine(){
         super();
     }
-public Vine (int quantity, String type, double price, String name, String color, String shugar){
+public Vine (int quantity, String type, double price, String name, String color, String shugar, int age){
         super(quantity, type, name, price);
         this.color = color;
         this.shugar = shugar;
+        this.age = age;
 }
-
+@Override
+public double getDiscount(){
+        if(age > 20){
+            return 0.9;
+        }
+        return 0.85;
+}
     @Override
     public String toString() {
         return "Vine{" +

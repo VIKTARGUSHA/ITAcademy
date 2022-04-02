@@ -6,8 +6,10 @@ public class BillPrint {
                 "Bueyer: " + deal.buyer + "\n" +
                 "Saller: " + deal.saller + "\n" + " \n " +"        CHECK");
         for (Product product : deal.basket){
-            System.out.println( product.type + " " + product.name + ": " + product.price
-                    + " x " + product.quantity + " = " +product.quantity* product.price );
+            if(product != null) {
+                System.out.println(product.type + " " + product.name + ": " + product.price
+                        + " x " + product.quantity + " = " + product.quantity * product.price);
+            }else break;
         }
         System.out.println("Total amount: " + deal.fullPrice);
     }
