@@ -11,18 +11,19 @@ public class ArraysTask16 {
         int generalMultiply = 0;
         var indexMax = 0;
         for (int i = 0; i < 7; i++){
-            System.out.println();
+
             int maxMultiply = 1;
             for (int j = 0; j < 4; j++){
                 array[i][j] = (int)(Math.random()*12-6);
                 System.out.print(array[i][j] + " ");
                 maxMultiply *= array[i][j];
             }
+
             if (Math.abs(maxMultiply) > generalMultiply){
                 generalMultiply = Math.abs(maxMultiply);
                 indexMax = i;
             }
-            System.out.print("           " + indexMax + " " + maxMultiply + " " + generalMultiply + "\n");
+            System.out.println();
         }
         System.out.println(indexMax);
     }
