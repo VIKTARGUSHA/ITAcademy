@@ -1,10 +1,11 @@
 package by.academy.HomeWork.Deal;
 
-public class Product {
+public abstract class Product {
    protected double quantity;
     protected String type;
     protected String name;
     protected double price;
+
  public Product(double quantity, String type, String name, double price){
      this.type = type;
      this.name = name;
@@ -15,8 +16,10 @@ public class Product {
     public Product() {
     }
 public double getColculatedPrice(){
-     return price * quantity;
+     return price * quantity * getDiscount();
 }
+public abstract double getDiscount();
+
     @Override
     public String toString() {
         return "Product{" +

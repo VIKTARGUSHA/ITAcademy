@@ -10,6 +10,11 @@ public class Chocolate extends Product{
         this.flavor = flavor;
         this.weight = weight;
     }
+    @Override
+    public double getDiscount() {
+        return 0.9;
+    }
+
     public int getWeight() {
         return weight;
     }
@@ -24,5 +29,13 @@ public class Chocolate extends Product{
 
     public void setFlavor(String flavor) {
         this.flavor = flavor;
+    }
+
+    @Override
+    public String toString() {
+        return "Chocolate{" +
+                "flavor='" + flavor + '\'' +
+                ", weight=" + weight +
+                '}';
     }
 }
