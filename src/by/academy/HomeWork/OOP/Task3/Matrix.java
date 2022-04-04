@@ -14,7 +14,7 @@ public class Matrix {
         double [][] firstMatrix = new double[quantityStrings][quantityColumns];
         for (int i = 0; i < quantityStrings; i++){
             for (int j = 0; j < quantityColumns; j++){
-                firstMatrix[i][j] = (int)(Math.random()*100-50);
+                firstMatrix[i][j] = (int)(Math.random()*11);
             }
         }
         return firstMatrix;
