@@ -8,6 +8,8 @@ public class Phone implements java.io.Serializable {
     protected double weight;
     public Phone(int number, String model, double weight){
         this.weight = weight;
+        this.model = model;
+        this.number = number;
         new Phone(number, model);
     }
     public Phone(int number, String model){
@@ -20,8 +22,9 @@ public class Phone implements java.io.Serializable {
 
     public void sendMessage(int ... x){
         for (int i = 0; i < x.length; i++){
-            System.out.println(x[i]);
+            System.out.print(" " + x[i]);
         }
+        System.out.println();
     }
 
     public String recieveCall(String name){
