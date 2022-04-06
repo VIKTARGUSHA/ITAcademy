@@ -39,19 +39,27 @@ public class Matrix {
         }
         array = adArray;
     }
+
+    public void print(double[][] matrix){
+        for (int i = 0; i < matrix.length; i++){
+            for (int j = 0; j < matrix[0].length; j++){
+                System.out.print( matrix[i][j] + "  ");
+            }
+            System.out.println();
+        }
+    }
     public void multiply(double[][] firstMatrix, double[][] secondMatrix) {
-        double [][] adArray = new double[quantityStrings][quantityColumns];
-        for (int i = 0; i < quantityStrings; i++) {
-            for (int y = 0; y < quantityColumns; y++) {
+        double [][] adArray = new double[firstMatrix.length][secondMatrix[0].length];
+        for (int i = 0; i < firstMatrix.length; i++) {
+            for (int y = 0; y < secondMatrix[0].length; y++) {
                 double x = 0;
-                for (int j = 0; j < quantityColumns; j++) {
+                for (int j = 0; j < firstMatrix[0].length; j++) {
                     x += firstMatrix[i][j] * secondMatrix[j][y];
-                    if (j == quantityColumns - 1) {
-                        adArray[i][j] = x;
+                    if (j == firstMatrix[0].length - 1) {
+                        adArray[i][y] = x;
                     }
                 }
             }
-
         }
         array = adArray;
     }
