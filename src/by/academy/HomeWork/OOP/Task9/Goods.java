@@ -5,8 +5,7 @@ public class Goods {
     protected double price;
     protected String reiting;
     protected String categoryName;
-    Category category = new Category(categoryName);
-    Category category1 = new Category(categoryName );
+
 
     public Goods(String name, double price, String reiting, String categoryName){
         this.name = name;
