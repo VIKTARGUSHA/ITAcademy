@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 //14. Ввести число от 1 до 12. Вывести на консоль название месяца,
 //        соответ-ствующего данному числу. (Осуществить проверку корректности ввода чисел).
-public class StringTask14 {
+public class StringsTask14 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int month = scanner.nextInt();
