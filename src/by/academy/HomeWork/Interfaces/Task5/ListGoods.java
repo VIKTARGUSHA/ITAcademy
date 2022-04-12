@@ -20,7 +20,7 @@ public enum ListGoods {
     void buyGoods(ListGoods [] listBuyedGoods){
         if (listBuyedGoods != null){
             for(int i = 0; i < listBuyedGoods.length; i++){
-                if(listBuyedGoods[i] == null){
+                if(listBuyedGoods[i] != null){
                     System.out.println(listBuyedGoods[i] + "is buyed");
                 }
             }
