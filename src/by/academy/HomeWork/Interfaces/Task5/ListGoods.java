@@ -7,7 +7,7 @@ public enum ListGoods {
     void showListOfGoods(){
         System.out.println(Arrays.toString(ListGoods.values()));
     }
-    void addGoods(ListGoods [] listGoods, ListGoods lgd){
+    void addGoodsInTheBasket(ListGoods [] listGoods, ListGoods lgd){
         if (listGoods != null){
             for(int i = 0; i < listGoods.length; i++){
                 if(listGoods[i] == null){
