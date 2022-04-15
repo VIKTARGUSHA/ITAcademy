@@ -36,6 +36,16 @@ public class InternetShop {
      }
         System.out.println(Arrays.toString(ListGoods.values()));
      ListGoods[] listGoodsArray = new ListGoods[10];
-ListGoods.Bread.addGoodsInTheBasket(listGoodsArray, ListGoods.Bread);
+ListGoods.Bread.addGoodsInTheBasket(listGoodsArray, "Bread");
+ListGoods.Magazine.addGoodsInTheBasket(listGoodsArray, "Magazine");
+ListGoods.Paper.addGoodsInTheBasket(listGoodsArray, "Salt");
+listGoodsArray[3] = ListGoods.Bread;
+listGoodsArray[4] = ListGoods.Meat;
+listGoodsArray[5] = ListGoods.Tea;
+for(ListGoods list : listGoodsArray){
+    if(list != null) {
+        list.buyGoods(list);
+    }
+}
     }
 }

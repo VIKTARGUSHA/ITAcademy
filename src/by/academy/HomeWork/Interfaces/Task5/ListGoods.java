@@ -7,23 +7,21 @@ public enum ListGoods {
     void showListOfGoods(){
         System.out.println(Arrays.toString(ListGoods.values()));
     }
-    void addGoodsInTheBasket(ListGoods [] listGoods, ListGoods lgd){
+    void addGoodsInTheBasket(ListGoods [] listGoods, String lgd){
         if (listGoods != null){
             for(int i = 0; i < listGoods.length; i++){
                 if(listGoods[i] == null){
-                    listGoods[i] = lgd;
+                    listGoods[i] = valueOf(lgd);
                     break;
                 }
             }
         }
     }
-    void buyGoods(ListGoods [] listBuyedGoods){
-        if (listBuyedGoods != null){
-            for(int i = 0; i < listBuyedGoods.length; i++){
-                if(listBuyedGoods[i] != null){
-                    System.out.println(listBuyedGoods[i] + "is buyed");
+    void buyGoods(ListGoods listBuyedGoods){
+                if(listBuyedGoods != null){
+                    System.out.println(listBuyedGoods + " is buyed");
                 }
             }
         }
-    }
-}
+
+
