@@ -10,7 +10,7 @@ public class MatrixMain {
         Character[][] array3 = new Character [5][7];
         String s = "H";
         double d = 1;
-        int in = 1;
+        int in = 32;
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 7; j++) {
                 array[i][j] = (int) (Math.random() * 10);
