@@ -1,7 +1,6 @@
-package by.academy.HomeWork.Collections;
+package by.academy.HomeWork.Collections.Task1;
 
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.TreeSet;
 
 public class Task1 implements Comparable {
@@ -12,24 +11,19 @@ public class Task1 implements Comparable {
         special = i;
     }
 
-    public static TreeSet<Task1> returnListWithoutDublicates(ArrayList<Task1> ar) {
+    public static ArrayList<Task1> returnListWithoutDublicates(ArrayList<Task1> ar) {
         TreeSet<Task1> tree = new TreeSet<>();
         ArrayList<Task1> ar1 = new ArrayList<>();
+        tree.addAll(ar);
 
-        for (int i = 0; i < ar.size(); i++) {
-            tree.add(ar.get(i));
+        Task1 [] array = tree.toArray(Task1[]::new);
+        for (int j = 0; j < array.length; j++){
+            ar1.add(array[j]);
         }
-       // System.out.println(tree.toString());
-        return tree;
+        return ar1;
     }
-//        Task1 [] array =  tree.toArray();
-//        for (int j = 0; j < array.length; j++){
-//            ar1.add(array[j]);
-//        }
-//        return ar1;
-//    }
-//
-//
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -56,7 +50,9 @@ public class Task1 implements Comparable {
             if (task1.special == this.special) {
                 return 0;
             }
-            return 1;
+            else if(task1.special < this.special){
+                return 1;
+            }else return -1;
         }
 
 }

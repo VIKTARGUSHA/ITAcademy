@@ -1,4 +1,4 @@
-package by.academy.HomeWork.Collections;
+package by.academy.HomeWork.Collections.Task1;
 
 import java.util.ArrayList;
 
@@ -16,5 +16,6 @@ public class MainTask1 {
         ar.add(new Task1(2));
         ar.add(new Task1(11));
         System.out.println(Task1.returnListWithoutDublicates(ar).toString());
+
     }
 }
