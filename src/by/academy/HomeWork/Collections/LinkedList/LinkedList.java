@@ -1,27 +1,55 @@
 package by.academy.HomeWork.Collections.LinkedList;
 
 public class LinkedList<T> {
-    private int size;
+    private int size = 0;
     Node <T> first;
     Node <T> last;
-    public void add( int index ,Node <T> newNode) {
-        if (index < 0 || index >= size) {
+
+
+public Node<T> get(int index){
+    Node <T> node = first;
+    int indexI = 0;
+    while (index < indexI){
+         node = node.next;
+        indexI++;
+    }
+    return node;
+}
+public void add(T item){
+    Node <T> nodeAdd = new Node<>(item);
+    if(first == null){
+        last = nodeAdd;
+        first = nodeAdd;
+    } else {
+        last.next = nodeAdd;
+        nodeAdd.prev = last;
+        last = nodeAdd;
+        size++;
+    }
+}
+
+    public void add( int index ,T item) {
+
+    Node <T> nodeBeforeReplace = get(index-1);
+        Node <T> nodeWithThisItem = new Node<>(item);
+        if (index < 0 || index > size) {
             System.out.println("Index out of bounds");
+
         }
-        if (index == 0 && size == 0) {
-            first = newNode;
-            first.next = null;
-            first.prev = null;
+        else if (index == size) {
+           add(item);
+            size++;
+
+        }
+        else  {
+            Node <T> nodeForReplace = get(index);
+           nodeWithThisItem.next = nodeForReplace;
+           nodeWithThisItem.prev = nodeForReplace.prev;
+           nodeForReplace.prev = nodeWithThisItem;
+           nodeForReplace.prev.next = nodeWithThisItem;
             size++;
         }
-        if (index == size - 1) {
-            newNode.next = null;
-            newNode.prev = last.prev;
-            last = newNode;
-
-        }
     }
-
 
     public class Node <T>{
 public T item;
@@ -32,7 +60,8 @@ public Node(T item, Node<T> prev, Node<T> next){
     this.prev = prev;
     this.next = next;
 }
-
+public Node (T item){
+    this.item = item;
+}
     }
-
 }
