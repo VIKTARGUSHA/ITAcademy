@@ -1,42 +1,42 @@
 package by.academy.HomeWork.Collections.Task2;
 
+import java.awt.*;
 import java.util.*;
+import java.util.List;
 
 public class Task2 {
     public static void main(String[] args) {
-        LinkedList linkedList = new LinkedList();
-        ArrayList arrayList = new ArrayList();
-        FillIn.fillInAr(arrayList);
-        FillIn.fillInlL(linkedList);
-        FillIn.getElement(arrayList);
-        FillIn.getElement1(linkedList);
+        LinkedList<Double> linkedList = new LinkedList();
+        ArrayList<Double> arrayList = new ArrayList();
+        FillArray.fillArrayList(arrayList);
+        FillArray.fillLink(linkedList);
+        FillArray.useArrayList(arrayList);
+        FillArray.useLinkedList(linkedList);
     }
-        static class FillIn{
-            public static void fillInAr(ArrayList<Double> ar){
-                for (int i = 0; i < 1000000; i++){
-                    ar.add(Math.random()*100);
-                }
-                System.out.println("Arraylist is full of");
+    public static class FillArray{
+public static void fillArrayList(ArrayList<Double> a){
+    for (int i = 0; i < 1_000_000; i++){
+        a.add(Math.random()*100);
+    }
+    System.out.println("ArrayListIsFull");
+}
+        public static void fillLink(LinkedList<Double> a){
+            for (int i = 0; i < 1_000_000; i++){
+                a.add(Math.random()*100);
             }
-            public static void fillInlL(LinkedList<Double> lL){
-                for (int i = 0; i < 1000000; i++){
-                    lL.add(Math.random()*100);
-                }
-                System.out.println("LinkedList is full of");
-            }
-            public static void getElement(ArrayList <?> ar){
-                for (int j = 0; j < 100000; j++){
-                    ar.get((int)(Math.random()*1000000));
-                }
-                System.out.println("ArrayList speed");
-            }
-            public static void getElement1(LinkedList <?> ar){
-                for (int j = 0; j < 100000; j++){
-                    ar.get((int)(Math.random()*1000000));
-                }
-                System.out.println("LinkedList speed");
-            }
+            System.out.println("LinkedListIsFull");
         }
-
+        public static void useArrayList(ArrayList<?> a){
+            for (int i = 0; i < 100_000; i++){
+                a.get((int)(Math.random()*1_000_000));
+            }
+            System.out.println("Time use ArrayList" + " " + a.size());
+        }
+        public static void useLinkedList(LinkedList<?> a){
+            for (int i = 0; i < 10000; i++){
+                a.get((int)(Math.random()*1_000_000));
+            }
+            System.out.println("Time use LinkedList" + " " + a.size());
+        }
     }
-
+}
