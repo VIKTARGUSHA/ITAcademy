@@ -5,6 +5,9 @@ public class MainLinkedList {
         linkedList.add("A");
         linkedList.add("B");
         linkedList.add("C");
+        linkedList.add("D");
+        linkedList.add("E");
         linkedList.print();
+        System.out.println("\n" + linkedList.get(2).toString());
     }
 }

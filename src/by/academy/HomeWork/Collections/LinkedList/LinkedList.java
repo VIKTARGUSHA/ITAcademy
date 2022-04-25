@@ -9,7 +9,7 @@ public class LinkedList<T> {
 public Node<T> get(int index){
     Node <T> node = first;
     int indexI = 0;
-    while (index < indexI){
+    while (indexI < index){
          node = node.next;
         indexI++;
     }
@@ -55,7 +55,7 @@ public void add(T item){
     public void print(){
         Node<T> node = first;
     for (int i = 0; i < size; i++){
-        System.out.println(node.item);
+        System.out.print(node.item + " ");
         node = node.next;
     }
     }
@@ -72,6 +72,11 @@ public Node(T item, Node<T> prev, Node<T> next){
 public Node (T item){
     this.item = item;
 }
+
+        @Override
+        public String toString() {
+            return String.valueOf(item);
+        }
     }
 
 }
