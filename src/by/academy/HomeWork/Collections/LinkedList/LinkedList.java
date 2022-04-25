@@ -21,11 +21,12 @@ public void add(T item){
         last = nodeAdd;
         first = nodeAdd;
     } else {
-        last.next = nodeAdd;
+        nodeAdd.next = null;
         nodeAdd.prev = last;
+        last.next = nodeAdd;
         last = nodeAdd;
-        size++;
     }
+    size++;
 }
 
     public void add( int index ,T item) {
@@ -52,12 +53,13 @@ public void add(T item){
     }
 
     public void print(){
+        Node<T> node = first;
     for (int i = 0; i < size; i++){
-        System.out.println(first.item);
-        first = first.next;
+        System.out.println(node.item);
+        node = node.next;
     }
     }
-public void 
+
     public class Node <T>{
 public T item;
 public Node <T> prev;
