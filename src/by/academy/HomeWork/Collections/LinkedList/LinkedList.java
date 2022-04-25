@@ -51,6 +51,13 @@ public void add(T item){
         }
     }
 
+    public void print(){
+    for (int i = 0; i < size; i++){
+        System.out.println(first.item);
+        first = first.next;
+    }
+    }
+public void 
     public class Node <T>{
 public T item;
 public Node <T> prev;
@@ -64,4 +71,5 @@ public Node (T item){
     this.item = item;
 }
     }
+
 }
