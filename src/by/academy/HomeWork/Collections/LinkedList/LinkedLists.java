@@ -1,6 +1,6 @@
 package by.academy.HomeWork.Collections.LinkedList;
 
-public class LinkedLists<T> {
+public class LinkedList<T> {
     private int size = 0;
     Node <T> first;
     Node <T> last;
@@ -9,7 +9,7 @@ public class LinkedLists<T> {
 public Node<T> get(int index){
     Node <T> node = first;
     int indexI = 0;
-    while (index < indexI){
+    while (indexI < index){
          node = node.next;
         indexI++;
     }
@@ -20,18 +20,18 @@ public void add(T item){
     if(first == null){
         last = nodeAdd;
         first = nodeAdd;
-        size++;
     } else {
-        last.next = nodeAdd;
+        nodeAdd.next = null;
         nodeAdd.prev = last;
+        last.next = nodeAdd;
         last = nodeAdd;
-        size++;
     }
+    size++;
 }
 
     public void add( int index ,T item) {
 
-
+    Node <T> nodeBeforeReplace = get(index-1);
         Node <T> nodeWithThisItem = new Node<>(item);
         if (index < 0 || index > size) {
             System.out.println("Index out of bounds");
@@ -51,35 +51,15 @@ public void add(T item){
             size++;
         }
     }
+
     public void print(){
-    Node<T> node = first;
+        Node<T> node = first;
     for (int i = 0; i < size; i++){
-        System.out.println(node.item);
-        node = first.next;
-        first = node;
+        System.out.print(node.item + " ");
+        node = node.next;
     }
     }
 
-    public void remove(int index) {
-        if (index < 0 || index > size-1) {
-            System.out.println("There is index out of bounds mistake");
-        } else if (index == size-1) {
-            Node <T> node = get(index);
-            node.prev.next =null;
-            last = node.prev;
-        }
-        else if(index == 0){
-            Node<T> node = get(index);
-            node.prev.next = node.next;
-            node.next.prev = node.prev;
-            size--;
-        } else  {
-            Node<T> node = get(index);
-            node.next.prev = null;
-            first = node.next;
-            size--;
-        }
-    }
     public class Node <T>{
 public T item;
 public Node <T> prev;
@@ -95,11 +75,8 @@ public Node (T item){
 
         @Override
         public String toString() {
-            return "Node{" +
-                    "item=" + item +
-                    ", prev=" + prev +
-                    ", next=" + next +
-                    '}';
+            return String.valueOf(item);
         }
     }
+
 }
