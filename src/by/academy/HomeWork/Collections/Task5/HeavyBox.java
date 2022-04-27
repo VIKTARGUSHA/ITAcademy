@@ -18,7 +18,15 @@ public class HeavyBox implements Comparable<HeavyBox>{
     @Override
     public String toString() {
         return "HeavyBox{" +
-                "weight=" + weight +
+                "weight=" + weight +" " + "number=" + number +
                 '}';
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 }
