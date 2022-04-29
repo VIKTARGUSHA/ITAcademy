@@ -12,15 +12,14 @@ public class Task12 {
     public static ArrayList<ArrayList<HeavyBox>> heavyBoxesSort(ArrayList <HeavyBox> aD){
         ArrayList <HeavyBox> newArrayDeque = new ArrayList<>();
         ArrayList <ArrayList<HeavyBox>> arrayList = new ArrayList<>();
-        ArrayList <HeavyBox> aDMod = aD;
+        ArrayList <HeavyBox> aDMod = new ArrayList<>();
+        aDMod.addAll(aD);
         for (HeavyBox box : aD){
             if(box.getWeight() > 300){
                 newArrayDeque.add(box);
               aDMod.remove(box);
             }
         }
-        System.out.println(aD.size());
-        System.out.println(newArrayDeque.size());
         arrayList.add(aDMod);
         arrayList.add(newArrayDeque);
         return arrayList;
@@ -32,13 +31,18 @@ public class Task12 {
         arrayDeque.add(new HeavyBox(20,3));
         arrayDeque.add(new HeavyBox(320, 3));
         arrayDeque.add(new HeavyBox(20,3));
-        arrayDeque.add(new HeavyBox(325, 5));
+        arrayDeque.add(new HeavyBox(25, 5));
+        arrayDeque.add(new HeavyBox(50,3));
+        arrayDeque.add(new HeavyBox(525, 5));
+        for (int i = 0; i < arrayDeque.size(); i++){
+            System.out.println(arrayDeque.get(i));
+        }
         ArrayList<ArrayList<HeavyBox>> arrayList1 = Task12.heavyBoxesSort(arrayDeque);
         for (ArrayList<HeavyBox> a : arrayList1){
+            System.out.println();
             for (HeavyBox box : a){
                 System.out.print(box.toString() + " " + "\n");
             }
-            System.out.println(a.size());
         }
     }
 }
